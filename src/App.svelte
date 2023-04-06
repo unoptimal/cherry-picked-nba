@@ -39,7 +39,7 @@
 <p>So I gathered the career statistics of every player in the NBA database (as of April 5th, 2023) and filtered out those with incomplete stats (including those who played before the 3 pointer was introduced).</p>
 <p>Now, I hope you enjoy role-playing as a member of your local sports graphic team.</p>
 <p><i>Note: some players might still be missing due to rate-limited scraping issues. My bad.</i></p>
-<p>Oh, and by the way, the <a href='https://twitter.com/TheMMQBL/status/969017127264051200'>13.5/5.9/1.4/49%/30%3point club</a> is now the 12.4/5.7/1.4/49%/30% club. Unfortunately, Father Time stops for no man, not even all-time great Thaddeus Young.</p>
+<p>Oh, and by the way, the <a href='https://twitter.com/TheMMQBL/status/969017127264051200'>13.5/5.9/1.4/49%/30%3point club</a> is now the 12.4/5.7/1.4/49%/30%3point club. Unfortunately, Father Time stops for no man, not even all-time great Thaddeus Young.</p>
 
 <form on:submit={handleSubmit}>
   <label>
