@@ -5,7 +5,7 @@
   let filteredPlayers = [];
 
   onMount(async () => {
-    const response = await fetch('player_data.json');
+    const response = await fetch('./player_data.json');
     players = await response.json();
   });
 
@@ -33,20 +33,22 @@
 
 <h1>Find your own cherry-picked NBA stats</h1>
 <p style='text-align:center;'>by <a href='https://unoptimal.com/'>unoptimal</a></p>
-<p>Statistics are a very cool and fun part of sports. Hilariously, though, they can be sometimes be a bit <i>too</i> specific.</p>
-<p>Take, for example, this infamous Thaddeus Young graphic:</p>
-<img src="thaddeus.jpg" alt="thaddeus" width=100%>
-<p>Inspired by this, I gathered the career statistics of every player in the NBA database (as of April 5th, 2023) and filtered out those with incomplete stats (including those who played before the 3 pointer was introduced), whittling down around 4800 players to 3129.</p>
-<p>So now, I hope you enjoy roleplaying as a member of your local sports graphic team.</p>
+<p>Statistics are a very cool and fun part of sports. Hilariously, though, they can be sometimes be a bit <i>too</i> specific:</p>
+<img src="./thaddeus.jpg" alt="thaddeus" width=100%>
+<p>I love this graphic so much that I felt inspired to make a simple tool to replicate it's energy.</p>
+<p>So I gathered the career statistics of every player in the NBA database (as of April 5th, 2023) and filtered out those with incomplete stats (including those who played before the 3 pointer was introduced).</p>
+<p>Now, I hope you enjoy role-playing as a member of your local sports graphic team.</p>
+<p><i>Note: some players might still be missing due to rate-limited scraping issues. My bad.</i></p>
+<p>Oh, and by the way, the <a href='https://twitter.com/TheMMQBL/status/969017127264051200'>13.5/5.9/1.4/49%/30%3point club</a> is now the 12.4/5.7/1.4/49%/30% club. Unfortunately, Father Time stops for no man, not even all-time great Thaddeus Young.</p>
 
 <form on:submit={handleSubmit}>
   <label>
-    GP (Games Played)):
+    GP (Games Played):
     <input type="number" name="gp" value = 800>
   </label>
 
   <label>
-    PTS (Points)):
+    PTS (Points):
     <input type="number" name="pts" step="0.1" value = 12.4>
   </label>
 
@@ -84,6 +86,6 @@
   <p>No matching players found.</p>
 {/if}
 
-<i><p style='text-align:center'>View the source data here, and code here.</p></i>
+<i><p style='text-align:center'>View the source data <a href='https://github.com/unoptimal/cherry-picked-nba/blob/master/public/player_data.json'>here</a>, and code <a href='https://github.com/unoptimal/cherry-picked-nba'>here</a>.</p></i>
 <i><p style='text-align:center'>If you find anything silly, please let me know at <a href='https://twitter.com/thatsnotoptimal'>@thatsnotoptimal</a>. I would also love to make the filtering options more elaborate in the future, so let me know if you're interested in this too.</p></i>
 
